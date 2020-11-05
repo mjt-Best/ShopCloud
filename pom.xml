@@ -9,6 +9,7 @@
         <module>ShopCloud_Gateway</module>
         <module>ShopCloud_Entity</module>
         <module>ShopCloud_OrderList</module>
+        <module>ShopCloud_Remark</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

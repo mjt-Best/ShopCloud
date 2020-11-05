@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mjt.dao">
+    <insert id="add" parameterType="com.mjt.dto.RemarkDto">
+        insert into t_remark(
+                <if test="qid != null">
+                    qid,
+                </if>
+                <if test="wid != null">
+                    wid,
+                </if>
+                <if test="rscore != null">
+                    rscore,
+                </if>
+                <if test="content != null">
+                    content,
+                </if>
+                <if test="photourl != null">
+                    photourl
+                </if>
+        ) value(
+            #{qid},#{wid},#{rscore},#{content},#{photourl}
+        )
+    </insert>
+</mapper>
