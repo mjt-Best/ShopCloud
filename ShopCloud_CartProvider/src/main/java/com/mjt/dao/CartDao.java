@@ -28,10 +28,10 @@ public interface CartDao {
     //添加商品到购物车
     @Insert("insert into t_cart(uid,skuid,jprice,scount,ctime) values(#{uid},#{skuid},#{jprice},#{scount},now())")
     int insert(CartAddDto cartAddDto);
-    //添加购物车商品数量
+    //购物车的商品数量增减
     @Update("update t_cart set scount = scount +#{scount} where skuid = #{skuid} and uid = #{uid}")
     int updatePlus(CartAddDto cartAddDto);
-    //
+    //在商品信息中增减数量再添加到数据库中
     @Update("update t_cart set scount = scount +#{scount} where id = #{id}")
     int update(CartItemDto cartItemDto);
 

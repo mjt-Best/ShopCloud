@@ -8,6 +8,7 @@
         <module>ShopCloud_CartProvider</module>
         <module>ShopCloud_Gateway</module>
         <module>ShopCloud_Entity</module>
+        <module>ShopCloud_OrderList</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
